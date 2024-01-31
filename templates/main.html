@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy: default-src'*'" content="upgrade-insecure-requests">
+    <title>동방 출력 페이지</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ssccpromotion.xyz/images/favicon.png">
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+  <body>
+    <header>
+
+      <div id="top-title">
+        <span class="top-left-title">
+          <a href="http://promotion.sscc.run/" class="hrek" target="_blank" rel="noopener noreferrer">
+          <img src="../static/images/logo.png">
+          SSCC
+          </a>
+          Board
+        </span>
+      </div>
+
+      <nav></nav>
+      <div class="title">
+        <h1>
+          동아리방<br>실시간 상황판
+        </h1>
+      </div>
+      <div class="update">
+        <button onClick="window.location.reload()" type="submit" id="refresh" class="mini compact ui button">
+          새로고침
+        </button>
+        <div class="Accessor">
+          {{Accessor}}
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="nCnt">
+          <h2>인원수</h2>
+          <h3> {{ response.head_count }} </h3>
+          <h3>{{ response.time }} </h3>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-img">
+        <a href='https://www.facebook.com/groups/ssccob/' class="icon" target="_blank" rel="noopener noreferrer">
+          <img src="../static/images/facebook.png" alt="Facebook Image" class="footer-image">
+        </a>
+        <a href='https://www.instagram.com/sscc_ssu/' class="icon" target="_blank" rel="noopener noreferrer">
+          <img src="../static/images/instagram.png" alt="Instagram Image" class="footer-image">
+        </a>
+        <a href='http://promotion.sscc.run/' class="icon" target="_blank" rel="noopener noreferrer">
+          <img src="../static/images/logo.png" alt="SSCC Image" class="footer-image">
+        </a>
+        <a href='https://open.kakao.com/o/spVNT95e' class="icon" target="_blank" rel="noopener noreferrer">
+          <img src="../static/images/kakao.png" alt="Kakao Image" class="footer-image">
+        </a>
+      </div>
+      <a href='/contributor' class="contributor" target="_blank" rel="noopener noreferrer">
+        © 2023 SoongSil Computing Club
+      </a>
+    </footer>
+  </body>
+</html>
